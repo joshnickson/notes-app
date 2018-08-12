@@ -9,4 +9,8 @@ class Notebook
     @notes[note.title] = note.body
   end
 
+  def show_titles
+    
+  end
+
 end
