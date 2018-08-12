@@ -1,4 +1,4 @@
 class Notebook
-  def add
+  def add(note)
   end
 end
