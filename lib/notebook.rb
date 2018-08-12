@@ -13,4 +13,8 @@ class Notebook
     titles = @notes.to_a.map { |title, body| title }.join', '
   end
 
+  def show_note(title)
+    @notes[title]
+  end
+
 end
