@@ -2,6 +2,7 @@ require 'notebook'
 
 describe Notebook do
   it 'can add a note' do
-    expect(subject).to respond_to(:add).with(1).argument
+    note = Note.new('title', 'body')
+    expect(subject.add(note)).to eq nil
   end
 end
