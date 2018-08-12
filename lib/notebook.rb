@@ -1,11 +1,12 @@
 class Notebook
+  attr_reader :notes
 
   def initialize
-    @notes = []
+    @notes = {}
   end
 
   def add(note)
-    @notes << [note.title, note.body]
+    @notes[note.title] = note.body
   end
 
 end

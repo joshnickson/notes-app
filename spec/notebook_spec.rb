@@ -1,8 +1,12 @@
 require 'notebook'
 
 describe Notebook do
-  it 'can add a note' do
+  let(:notebook) { Notebook.new }
+
+  it 'can add a note with title and body' do
     note = Note.new('title', 'body')
-    expect(subject.add(note)[-1]).to eq ['title', 'body']
+    notebook.add(note)
+    expect(notebook.notes['title']).to eq 'body'
   end
+  
 end
