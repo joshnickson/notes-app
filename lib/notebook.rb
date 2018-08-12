@@ -10,7 +10,7 @@ class Notebook
   end
 
   def show_titles
-    
+    titles = @notes.to_a.map { |title, body| title }.join', '
   end
 
 end

@@ -10,10 +10,10 @@ describe Notebook do
   end
 
   it 'can show a list of titles' do
-    note = Note.new('title1', 'body1')
-    note = Note.new('title2', 'body2')
-    note = Note.new('title3', 'body3')
-    expect(notebook.show_titles).to eq nil
+    notebook.add(Note.new('title1', 'body1'))
+    notebook.add(Note.new('title2', 'body2'))
+    notebook.add(Note.new('title3', 'body3'))
+    expect(notebook.show_titles).to eq 'title1, title2, title3'
   end
 
 end
